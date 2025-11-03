@@ -27,8 +27,6 @@ function login() {
 
         lock_screen.style.display = "none";
 
-        location = "Desktop.html";
-
     }, 400);
 
 };
