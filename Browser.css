@@ -28,6 +28,64 @@
     cursor: pointer;
 }
 
+#tabs-box {
+    height: auto;
+    width: 100%;
+    padding: 0.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 0.5vw;
+}
+
+#tabs-box #tabs-list {
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 0.5vw;
+    overflow: auto;
+}
+
+#tabs-list #tab-box {
+    height: 100%;
+    width: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#tab-box #tab {
+    height: 100%;
+    width: 7vw;
+    text-align: center;
+    padding: 0.5vh;
+}
+
+#tab:hover {
+    background-color: gray;
+}
+
+#tab-box .close-tab-button {
+    height: 100%;
+    width: 3vw;
+    display: "flex";
+    align-items: "center";
+    justify-content: "center";
+}
+
+#tabs-box #new-tab-button {
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    height: 100%;
+    width: 3vw;
+    display: "flex";
+    align-items: "center";
+    justify-content: "center";
+}
+
 .bookmarks-box {
     height: auto;
     width: 100%;

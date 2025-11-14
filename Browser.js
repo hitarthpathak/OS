@@ -32,6 +32,26 @@ function open_browser() {
 
         <hr />
 
+        <div id="tabs-box">
+
+            <div id="tabs-list">
+
+                <div id="tab-box">
+
+                    <div id="tab">Tab</div>
+
+                    <button class="close-tab-button">x</button>
+
+                </div>
+
+            </div>
+
+            <button id="new-tab-button">+</button>
+
+        </div>
+
+        <hr />
+
         <iframe id="search-results" src="https://wikipedia.org"></iframe>
     
     `);
@@ -56,7 +76,49 @@ function open_browser() {
 
     });
 
+    open_new_tab();
+
     open_bookmarks(search_results);
+
+};
+
+function open_new_tab() {
+
+    let tabs_list = document.getElementById("tabs-list");
+    let new_tab_button = document.getElementById("new-tab-button");
+
+    new_tab_button.addEventListener("click", () => {
+
+        let new_tab = document.createElement("div");
+        new_tab.id = "tab";
+        new_tab.textContent = "Tab";
+
+        let close_tab_button = document.createElement("button");
+        close_tab_button.classList.add("close-tab-button");
+        close_tab_button.textContent = "x";
+        close_tab_button.addEventListener("click", close_tab);
+
+        let tab_box = document.createElement("div");
+        tab_box.id = "tab-box";
+
+        tab_box.appendChild(new_tab);
+        tab_box.appendChild(close_tab_button);
+
+        tabs_list.appendChild(tab_box);
+
+    });
+
+};
+
+function close_tab(event) {
+
+    let tab_box = event.target.closest('#tab-box');
+
+    if (tab_box) {
+
+        tab_box.remove();
+
+    }
 
 };
 

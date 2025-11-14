@@ -22,9 +22,9 @@ function open_app(app_class, app_title, app_html) {
 
             <div class="app-controls-box">
 
-                <button class="app-control" onclick="minimize_app('${app_class}')">Minimize</button>
+                <button class="app-control" onclick="contract_app('${app_class}')">Contract</button>
 
-                <button class="app-control" onclick="maximize_app('${app_class}')">Maximize</button>
+                <button class="app-control" onclick="expand_app('${app_class}')">Expand</button>
 
                 <button class="app-control" onclick="close_app('${app_class}')">Close</button>
 
@@ -87,36 +87,36 @@ function make_draggable(app) {
 
 // ------------------------------------------------------------------------------------------------
 
-function minimize_app(app_class) {
+function contract_app(app_class) {
 
     let app = document.querySelector(`.${app_class}`);
 
     if (!app) return;
 
-    if (app.classList.contains("maximize-app")) {
-        app.classList.remove("maximize-app");
-        app.classList.add("minimize-app");
+    if (app.classList.contains("expand-app")) {
+        app.classList.remove("expand-app");
+        app.classList.add("contract-app");
     }
     else {
-        app.classList.add("minimize-app");
+        app.classList.add("contract-app");
     }
 
 };
 
 // ------------------------------------------------------------------------------------------------
 
-function maximize_app(app_class) {
+function expand_app(app_class) {
 
     let app = document.querySelector(`.${app_class}`);
 
     if (!app) return;
 
-    if (app.classList.contains("minimize-app")) {
-        app.classList.remove("minimize-app");
-        app.classList.add("maximize-app");
+    if (app.classList.contains("contract-app")) {
+        app.classList.remove("contract-app");
+        app.classList.add("expand-app");
     }
     else {
-        app.classList.add("maximize-app");
+        app.classList.add("expand-app");
     }
 
 };
@@ -129,7 +129,7 @@ function close_app(app_class) {
 
     if (!app) return;
 
-    app.classList.remove("open-app", "minimize-app", "maximize-app");
+    app.classList.remove("open-app", "contract-app", "expand-app");
     app.classList.add("close-app");
 
     app.addEventListener("animationend", () => {

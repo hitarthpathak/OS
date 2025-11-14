@@ -7,7 +7,7 @@ let password = document.getElementById("password");
 
 window.addEventListener("load", () => {
 
-    // login();
+    login();
 
 });
 
@@ -68,9 +68,13 @@ function wrong_password() {
 
 function show_desktop() {
 
+    let startup_sound = new Audio("Sounds/Startup Sound.mp3");
+
     show_desktop_icons();
 
     show_taskbar();
+
+    startup_sound.play();
 
 };
 
