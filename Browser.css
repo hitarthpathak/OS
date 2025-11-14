@@ -1,0 +1,52 @@
+.browser-app {
+    height: 70vh;
+    width: 50vw;
+    top: 10vh;
+    left: 10vw;
+}
+
+.search-bar-box {
+    height: auto;
+    width: 100%;
+    padding: 0.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar-box #search-bar {
+    height: auto;
+    width: 90%;
+    padding: 0.5vh;
+    outline: none;
+}
+
+.search-bar-box #search-button {
+    height: auto;
+    width: 10%;
+    padding: 0.5vh;
+    cursor: pointer;
+}
+
+.bookmarks-box {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 0.3vw;
+}
+
+.bookmarks-box button {
+    height: auto;
+    min-width: 5vw;
+    padding: 0.5vh;
+    cursor: pointer;
+}
+
+#search-results {
+    height: 60vh;
+    width: 100%;
+    flex: 1;
+    background-color: white;
+}

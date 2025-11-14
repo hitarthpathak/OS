@@ -1,0 +1,111 @@
+.open-app,
+.minimize-app,
+.maximize-app,
+.close-app {
+    border: 1px solid rgb(150, 150, 150);
+    background-color: rgb(200, 200, 200);
+    padding: 0.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    transform-origin: center center;
+}
+
+.open-app {
+    animation: open-app 0.3s;
+}
+
+@keyframes open-app {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.minimize-app {
+    animation: minimize-app 0.3s;
+}
+
+@keyframes minimize-app {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.maximize-app {
+    height: 93vh !important;
+    width: 100vw !important;
+    top: 0 !important;
+    left: 0 !important;
+    animation: maximize-app 0.3s;
+}
+
+@keyframes maximize-app {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.close-app {
+    animation: close-app 0.3s;
+}
+
+@keyframes close-app {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+.title-bar {
+    height: auto;
+    width: 100%;
+    padding: 0.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.app-name-box {
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app-controls-box {
+    height: 100%;
+    width: fit-content;
+}
+
+.app-control {
+    height: 100%;
+    width: auto;
+    padding: 0.5vh;
+    cursor: pointer;
+}

@@ -3,14 +3,14 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 1vw;
-    font-family: 'Times New Roman';
+    font-family: 'Arial';
 }
 
 body {
     height: 100vh;
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.006);
-    background-image: url("Images/Lock\ Screen.jpg");
+    background-image: url("Images/Wallpaper.jpg");
     background-size: cover;
 }
 
@@ -27,16 +27,22 @@ body {
 form {
     height: 30vh;
     width: 30vw;
-    padding: 3vw;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 2vh;
+    justify-content: space-evenly;
     flex-direction: column;
 }
 
-form h1 {
-    font-size: 2vw;
+form #user-img-box {
+    border-radius: 50%;
+    height: 10vh;
+    width: auto;
+}
+
+#user-img-box img {
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
 }
 
 form input {
@@ -66,6 +72,53 @@ form input {
     }
 
     to {
-        margin-right: 2rem;
+        margin-right: 4rem;
     }
+}
+
+.taskbar-box {
+    height: 7vh;
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+}
+
+.taskbar {
+    border-radius: 15px;
+    height: 100%;
+    width: fit-content;
+    background-color: rgba(0, 0, 250, 0.50);
+    margin: auto;
+    padding: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+}
+
+.icon-box {
+    height: 5vh;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5vh;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.icon {
+    height: 5vh;
+    width: auto;
+}
+
+.desktop-icon-box {
+    height: 100%;
+    width: fit-content;
+    padding: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 7vh;
+    flex-direction: column;
 }
