@@ -7,7 +7,7 @@ let password = document.getElementById("password");
 
 window.addEventListener("load", () => {
 
-    login();
+    // login();
 
 });
 
