@@ -22,9 +22,9 @@ function open_app(app_class, app_title, app_html) {
 
             <div class="app-controls-box">
 
-                <button class="app-control" onclick="contract_app('${app_class}')">Contract</button>
+                <button class="app-control" id="contract-button" onclick="contract_app('${app_class}')">Contract</button>
 
-                <button class="app-control" onclick="expand_app('${app_class}')">Expand</button>
+                <button class="app-control" id="expand-button" onclick="expand_app('${app_class}')">Expand</button>
 
                 <button class="app-control" onclick="close_app('${app_class}')">Close</button>
 
@@ -49,6 +49,26 @@ function open_app(app_class, app_title, app_html) {
     });
 
     body.appendChild(app);
+
+    if (app_class == "clock-app") {
+
+        let contract_button = app.querySelector("#contract-button");
+        let expand_button = app.querySelector("#expand-button");
+
+        contract_button.disabled = true;
+        expand_button.disabled = true;
+
+    };
+
+    if (app_class == "file-viewer-app") {
+
+        let contract_button = app.querySelector("#contract-button");
+        let expand_button = app.querySelector("#expand-button");
+
+        contract_button.disabled = true;
+        expand_button.disabled = true;
+
+    };
 
     make_draggable(app);
 

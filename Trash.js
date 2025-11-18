@@ -1,5 +1,13 @@
 function open_trash() {
 
-    open_app("trash-app", "TRASH", "<p>Trash content here</p>");
+    open_app("trash-app", "TRASH", `
+
+        <div class="trash-body">
+
+            <p>No Trash Here</p>
+
+        </div>
+
+    `);
 
 };

@@ -2,57 +2,61 @@ function open_browser() {
 
     open_app("browser-app", "BROWSER", `
     
-        <div class="search-bar-box">
+        <div class="browser-body">
 
-            <input id="search-bar" type="text" placeholder="Enter URL">
+            <div class="search-bar-box">
 
-            <input id="search-button" type="submit" value="Search">
+                <input id="search-bar" type="text" placeholder="Enter URL">
 
-        </div>
-
-        <hr />
-
-        <div class="bookmarks-box">
-
-            <button id="internet-archive-bookmark">Internet Archive</button>
-
-            <button id="wikipedia-bookmark">Wikipedia</button>
-
-            <button id="maps-bookmark">Maps</button>
-
-            <button id="bitchute-bookmark">BitChute</button>
-
-            <button id="dailymail-bookmark">DailyMail</button>
-
-            <button id="the-free-press-journal-bookmark">The Free Press Journal</button>
-
-            <button id="healthline-bookmark">Healthline</button>
-
-        </div>
-
-        <hr />
-
-        <div id="tabs-box">
-
-            <div id="tabs-list">
-
-                <div id="tab-box">
-
-                    <div id="tab">Tab</div>
-
-                    <button class="close-tab-button">x</button>
-
-                </div>
+                <input id="search-button" type="submit" value="Search">
 
             </div>
 
-            <button id="new-tab-button">+</button>
+            <hr />
+
+            <div class="bookmarks-box">
+
+                <button id="internet-archive-bookmark">Internet Archive</button>
+
+                <button id="wikipedia-bookmark">Wikipedia</button>
+
+                <button id="maps-bookmark">Maps</button>
+
+                <button id="bitchute-bookmark">BitChute</button>
+
+                <button id="dailymail-bookmark">DailyMail</button>
+
+                <button id="the-free-press-journal-bookmark">The Free Press Journal</button>
+
+                <button id="healthline-bookmark">Healthline</button>
+
+            </div>
+
+            <hr />
+
+            <div id="tabs-box">
+
+                <div id="tabs-list">
+
+                    <div id="tab-box">
+
+                        <div id="tab">Tab</div>
+
+                        <button class="close-tab-button">x</button>
+
+                    </div>
+
+                </div>
+
+                <button id="new-tab-button">+</button>
+
+            </div>
+
+            <hr />
+
+            <iframe id="search-results" src="https://wikipedia.org"></iframe>
 
         </div>
-
-        <hr />
-
-        <iframe id="search-results" src="https://wikipedia.org"></iframe>
     
     `);
 
@@ -82,6 +86,8 @@ function open_browser() {
 
 };
 
+// ------------------------------------------------------------------------------------------------
+
 function open_new_tab() {
 
     let tabs_list = document.getElementById("tabs-list");
@@ -110,6 +116,8 @@ function open_new_tab() {
 
 };
 
+// ------------------------------------------------------------------------------------------------
+
 function close_tab(event) {
 
     let tab_box = event.target.closest('#tab-box');
@@ -121,6 +129,8 @@ function close_tab(event) {
     }
 
 };
+
+// ------------------------------------------------------------------------------------------------
 
 function browser_search(search_bar, search_results) {
 
@@ -136,6 +146,8 @@ function browser_search(search_bar, search_results) {
     search_results.src = search_query;
 
 };
+
+// ------------------------------------------------------------------------------------------------
 
 function open_bookmarks(search_results) {
 

@@ -56,7 +56,7 @@ function wrong_password() {
 
     form.style.animation = "show-error 0.3s";
 
-    let error_audio = new Audio("Sounds/Error.mp3");
+    let error_audio = new Audio("Audios/Error.mp3");
 
     error_audio.play();
 
@@ -68,7 +68,7 @@ function wrong_password() {
 
 function show_desktop() {
 
-    let startup_sound = new Audio("Sounds/Startup Sound.mp3");
+    let startup_sound = new Audio("Audios/Startup Sound.mp3");
 
     show_desktop_icons();
 
@@ -94,7 +94,7 @@ function show_desktop_icons() {
 
     files_icon.innerHTML = `
 
-        <img class="icon" src="Images/Desktop Icon (Default).png" alt="Icon">
+        <img class="icon" src="Pictures/Files App (Icon).png" alt="Icon">
 
         <span>Files</span>
 
@@ -109,7 +109,7 @@ function show_desktop_icons() {
 
     browser_icon.innerHTML = `
 
-        <img class="icon" src="Images/Desktop Icon (Default).png" alt="Icon">
+        <img class="icon" src="Pictures/Browser App (Icon).png" alt="Icon">
 
         <span>Browser</span>
 
@@ -124,7 +124,7 @@ function show_desktop_icons() {
 
     trash_icon.innerHTML = `
 
-        <img class="icon" src="Images/Desktop Icon (Default).png" alt="Icon">
+        <img class="icon" src="Pictures/Trash App (Icon).png" alt="Icon">
 
         <span>Trash</span>
 
@@ -149,33 +149,33 @@ function show_taskbar() {
 
     taskbar.innerHTML = `
 
-        <div class="icon-box">
+        <div class="icon-box" onclick="open_clock()">
 
-            <img class="icon" src="Images/Desktop Icon (Default).png" alt="Icon">
-
-        </div>
-
-        <div class="icon-box">
-
-            <img class="icon" src="Images/Desktop Icon (Default).png" alt="Icon">
+            <img class="icon" src="Pictures/Clock App (Icon).png" alt="Icon">
 
         </div>
 
         <div class="icon-box">
 
-            <img class="icon" src="Images/Desktop Icon (Default).png" alt="Icon">
+            <img class="icon" src="Pictures/App Icon (Default).png" alt="Icon">
 
         </div>
 
         <div class="icon-box">
 
-            <img class="icon" src="Images/Desktop Icon (Default).png" alt="Icon">
+            <img class="icon" src="Pictures/App Icon (Default).png" alt="Icon">
 
         </div>
 
         <div class="icon-box">
 
-            <img class="icon" src="Images/Desktop Icon (Default).png" alt="Icon">
+            <img class="icon" src="Pictures/App Icon (Default).png" alt="Icon">
+
+        </div>
+
+        <div class="icon-box">
+
+            <img class="icon" src="Pictures/App Icon (Default).png" alt="Icon">
 
         </div>
 

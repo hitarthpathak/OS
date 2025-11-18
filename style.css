@@ -10,8 +10,9 @@ body {
     height: 100vh;
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.006);
-    background-image: url("Images/Wallpaper.jpg");
+    background-image: url("Pictures/Wallpaper.jpg");
     background-size: cover;
+    user-select: none;
 }
 
 #lock-screen {
