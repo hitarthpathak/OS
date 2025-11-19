@@ -1,8 +1,8 @@
 .browser-app {
-    height: 70vh;
+    height: 80vh;
     width: 50vw;
-    top: 10vh;
-    left: 10vw;
+    top: 5vh;
+    left: 7vw;
 }
 
 .browser-body {
@@ -35,6 +35,10 @@
     width: 10%;
     padding: 0.5vh;
     cursor: pointer;
+}
+
+.bookmarks-box {
+    padding: 0 0.5vh;
 }
 
 #tabs-box {

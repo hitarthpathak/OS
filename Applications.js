@@ -32,8 +32,6 @@ function open_app(app_class, app_title, app_html) {
 
         </div>
 
-        <hr />
-
         ${app_html}
 
     `;
@@ -58,6 +56,12 @@ function open_app(app_class, app_title, app_html) {
         contract_button.disabled = true;
         expand_button.disabled = true;
 
+        contract_button.style.color = "gray";
+        contract_button.style.cursor = "not-allowed";
+
+        expand_button.style.color = "gray";
+        expand_button.style.cursor = "not-allowed";
+
     };
 
     if (app_class == "file-viewer-app") {
@@ -67,6 +71,12 @@ function open_app(app_class, app_title, app_html) {
 
         contract_button.disabled = true;
         expand_button.disabled = true;
+
+        contract_button.style.color = "gray";
+        contract_button.style.cursor = "not-allowed";
+
+        expand_button.style.color = "gray";
+        expand_button.style.cursor = "not-allowed";
 
     };
 
