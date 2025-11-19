@@ -2,9 +2,8 @@
 .contract-app,
 .expand-app,
 .close-app {
-    border: 1px solid rgb(150, 150, 150);
+    border: 5px solid blue;
     background-color: rgb(200, 200, 200);
-    padding: 0.5vh;
     display: flex;
     align-items: center;
     justify-content: start;
@@ -89,6 +88,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: blue;
+    color: white;
 }
 
 .app-name-box {
@@ -105,8 +106,25 @@
 }
 
 .app-control {
+    border: none;
     height: 100%;
     width: auto;
     padding: 0.5vh;
     cursor: pointer;
+    font-weight: bold;
+}
+
+#contract-button {
+    background-color: yellow;
+    color: black;
+}
+
+#expand-button {
+    background-color: green;
+    color: white;
+}
+
+#close-button {
+    background-color: red;
+    color: white;
 }

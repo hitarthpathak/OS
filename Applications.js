@@ -26,7 +26,7 @@ function open_app(app_class, app_title, app_html) {
 
                 <button class="app-control" id="expand-button" onclick="expand_app('${app_class}')">Expand</button>
 
-                <button class="app-control" onclick="close_app('${app_class}')">Close</button>
+                <button class="app-control" id="close-button" onclick="close_app('${app_class}')">Close</button>
 
             </div>
 

@@ -31,6 +31,8 @@
     width: 100%;
     padding: 1vh;
     cursor: pointer;
+    background-color: blue;
+    color: white;
 }
 
 .active {
@@ -47,6 +49,7 @@
     justify-content: start;
     gap: 1vw;
     flex-wrap: wrap;
+    background-color: white;
 }
 
 .file {
